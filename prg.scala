@@ -1428,6 +1428,159 @@ in the container on the first day. */
 //		printf("%5d",brr[i]);
 //}
 
+
+//Wap to print all the odd numbers from 1 to 100 using continue statement.
+//#include<stdio.h>
+//#include<conio.h>
+//void main()
+//{
+//	int i;
+//	for(i=1;i<=100;i++)
+//	{
+//		if(i%2==0)
+//			continue;
+//		printf("%3d",i);
+//	}
+//}
+
+//void main()
+//{
+//	int i=1;
+//	x:
+//		printf("%4d",i);
+//		i++;
+//	if(i<=100)
+//		goto x;
+//}
+
+//Swap adjacent elements of a 1D array
+//void main()
+//{
+//	int arr[100],ln,i,temp;
+//	printf("Enter array size");
+//	scanf("%d",&ln);
+//	for(i=0;i<ln;i++)
+//	{
+//		printf("%d element of array",i+1);
+//		scanf("%d",&arr[i]);
+//	}
+//	for(i=0;i<ln;i++)
+//	{
+//		printf("%5d",arr[i]);
+//	}
+//	for(i=0;i<ln-1;i+=2)
+//	{
+//		temp=arr[i];
+//		arr[i]=arr[i+1];
+//		arr[i+1]=temp;
+//	}
+//	printf("\n");
+//	for(i=0;i<ln;i++)
+//	{
+//		printf("%5d",arr[i]);
+//	}
+//	printf("\b\b");
+//}
+
+//void main()
+//{
+//	int arr[100],brr[100],i,j=0,n,k,temp;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array\n",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	for(i=0;i<n;i++)
+//	{
+//		if(arr[i]!=0)
+//			brr[j++]=arr[i];
+//	}
+//	if(j<n)
+//	{
+//		for(i=j;i<n;i++)
+//			brr[i]=0;
+//	}
+//	for(i=0;i<n;i++)
+//		printf("%5d",brr[i]);
+//}
+
+
+//Wap to print all the odd numbers from 1 to 100 using continue statement.
+//#include<stdio.h>
+//#include<conio.h>
+//void main()
+//{
+//	int i;
+//	for(i=1;i<=100;i++)
+//	{
+//		if(i%2==0)
+//			continue;
+//		printf("%3d",i);
+//	}
+//}
+
+//void main()
+//{
+//	int i=1;
+//	x:
+//		printf("%4d",i);
+//		i++;
+//	if(i<=100)
+//		goto x;
+//}
+
+//Swap adjacent elements of a 1D array
+//void main()
+//{
+//	int arr[100],ln,i,temp;
+//	printf("Enter array size");
+//	scanf("%d",&ln);
+//	for(i=0;i<ln;i++)
+//	{
+//		printf("%d element of array",i+1);
+//		scanf("%d",&arr[i]);
+//	}
+//	for(i=0;i<ln;i++)
+//	{
+//		printf("%5d",arr[i]);
+//	}
+//	for(i=0;i<ln-1;i+=2)
+//	{
+//		temp=arr[i];
+//		arr[i]=arr[i+1];
+//		arr[i+1]=temp;
+//	}
+//	printf("\n");
+//	for(i=0;i<ln;i++)
+//	{
+//		printf("%5d",arr[i]);
+//	}
+//	printf("\b\b");
+//}
+
+//void main()
+//{
+//	int arr[100],brr[100],i,j=0,n,k,temp;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array\n",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	for(i=0;i<n;i++)
+//	{
+//		if(arr[i]!=0)
+//			brr[j++]=arr[i];
+//	}
+//	if(j<n)
+//	{
+//		for(i=j;i<n;i++)
+//			brr[i]=0;
+//	}
+//	for(i=0;i<n;i++)
+//		printf("%5d",brr[i]);
+//}
+
+
 object prg
 {
     def main(args: Array[String]):Unit=

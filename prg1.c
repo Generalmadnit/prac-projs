@@ -1429,20 +1429,100 @@ in the container on the first day. */
 //}
 
 //WAP to read n elements into an array, swap the index values with elements
+//void main()
+//{
+//	int arr[10],brr[10],i,j,n;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of the array",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	for(i=0;i<n;i++)
+//		brr[i]=0;
+//	for(i=0;i<n;i++)
+//		brr[arr[i]-1]=arr[i];
+//	for(i=0;i<n;i++)
+//		printf("%5d",brr[i]);
+//}
+
+//Given an array arr[] of integers. Find max and min elements
+//void main()
+//{
+//	int min,max,i,arr[20],n;
+//	printf("Enter the array size");
+//	scanf("%d",&n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	min = arr[0];
+//	max = arr[0];
+//	for(i=0;i<n;i++)
+//	{
+//		if(arr[i]<min)
+//			min = arr[i];
+//		if(arr[i]>max)
+//			max=arr[i];
+//	}
+//	printf("Max ele is %d and min ele is %d",max,min);
+//}
+
+//
+//void main()
+//{
+//	int arr[20],brr[20],i,j=0,n;
+//	printf("Enter size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	printf("Elements before swap are\n");
+//	for(i=0;i<n;i++)
+//		printf("%3d",arr[i]);		
+//	for(i=n-1;i>=0;i--)
+//		brr[j++]=arr[i];
+//	for(i=0;i<n;i++)
+//		arr[i]=brr[i];
+//	printf("\nElements after swap are\n");
+//	for(i=0;i<n;i++)
+//		printf("%3d",arr[i]);
+//}
+
+//			OR
+//void main()
+//{
+//	int arr[20],i,j,n,t;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	for(i=0,j=n-1;i<j;i++,j--)
+//	{
+//		t=arr[j];
+//		arr[j]=arr[i];
+//		arr[i]=t;	
+//	}
+//	printf("Elements after swap is");
+//	for(i=0;i<n;i++)
+//		printf("%3d",arr[i]);
+//}
+
+//Given an array arr[] of integers. Find the count of 
 void main()
 {
-	int arr[10],brr[10],i,j,n;
+	int i,j,arr[20],sum,c=0,n;
 	printf("Enter the size of array");
 	scanf("%d",&n);
-	printf("Enter %d elements of the array",n);
+	printf("Enter %d elements of array",n);
 	for(i=0;i<n;i++)
 		scanf("%d",&arr[i]);
-	for(i=0;i<n;i++)
-		brr[i]=0;
+	printf("\nEnter the combination sum");
+	scanf("%d",&sum);
 	for(i=0;i<n;i++)
 	{
-		brr[arr[i]-1]=arr[i];
+		for(j=i;j<n;j++)
+			if(arr[i]+arr[j]==sum)
+				c++;
 	}
-	for(i=0;i<n;i++)
-		printf("%5d",brr[i]);
+	printf("\nThere are %d pair of sums",c);
+	
 }
