@@ -1507,22 +1507,62 @@ in the container on the first day. */
 //}
 
 //Given an array arr[] of integers. Find the count of 
+//void main()
+//{
+//	int i,j,arr[20],sum,c=0,n;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	printf("\nEnter the combination sum");
+//	scanf("%d",&sum);
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=i;j<n;j++)
+//			if(arr[i]+arr[j]==sum)
+//				c++;
+//	}
+//	printf("\nThere are %d pair of sums",c);
+//	
+//}
+
+//
+//void main()
+//{
+//	int i,arr[20],n;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	for(i=0;i<n-1;i++){
+//		if(arr[i+1]-arr[i]!=1){
+//			printf("Missing element is %d",arr[i]+1);
+//			break;
+//		}
+//	}
+//}
+
+//find the occurance of the int in array
 void main()
 {
-	int i,j,arr[20],sum,c=0,n;
+	int arr[20],n,k,i,fl=0;
 	printf("Enter the size of array");
 	scanf("%d",&n);
 	printf("Enter %d elements of array",n);
 	for(i=0;i<n;i++)
 		scanf("%d",&arr[i]);
-	printf("\nEnter the combination sum");
-	scanf("%d",&sum);
+	printf("Enter the element to find");
+	scanf("%d",&k);
 	for(i=0;i<n;i++)
 	{
-		for(j=i;j<n;j++)
-			if(arr[i]+arr[j]==sum)
-				c++;
+		if(arr[i]==k)
+		{
+			printf("\n%d is found at %d",k,i+1);
+			fl++;
+		}
 	}
-	printf("\nThere are %d pair of sums",c);
-	
+	if(fl==0)
+		printf("\n%d is not found",k);
 }
