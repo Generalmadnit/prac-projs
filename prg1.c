@@ -1545,24 +1545,251 @@ in the container on the first day. */
 //}
 
 //find the occurance of the int in array
+//void main()
+//{
+//	int arr[20],n,k,i,fl=0;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter %d elements of array",n);
+//	for(i=0;i<n;i++)
+//		scanf("%d",&arr[i]);
+//	printf("Enter the element to find");
+//	scanf("%d",&k);
+//	for(i=0;i<n;i++)
+//	{
+//		if(arr[i]==k)
+//		{
+//			printf("\n%d is found at %d",k,i+1);
+//			fl++;
+//		}
+//	}
+//	if(fl==0)
+//		printf("\n%d is not found",k);
+//}
+
+//array of ints find a peak element i.e., an elem that is not smaller than its neighbors
+//ex. arr={10,20,15,2,23,90,67} op: 20 or 90
+//void main()
+//{
+//	int a[20],n,pk[20],i,j=0;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<n;i++)
+//		scanf("%d",&a[i]);
+//	if(a[0]>=a[1])
+//		printf("\n %5d",a[n-1]);
+//	for(i=1;i<n-1;i++)
+//	{
+//		if(a[i-1]<=a[i]&&a[i]>=a[i+1])
+//			printf("\n %5d",a[n-1]);
+//	}
+//	if(a[n-1]>=a[n-2])
+//		printf("\n %5d",a[n-1]);
+//}
+
+//Given an unsorted array A of size N. Find the position where
+//equilibrium occurs first time in the array
+//void main()
+//{
+//	int a[20],lsum,n,rsum=0,i;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<n;i++)
+//		scanf("%d",&a[i]);		
+//	for(i=0;i<n;i++)
+//	{
+//		lsum=asum(a,0,i-1);
+//		rsum=asum(a,i+1,n-1);
+//		if(lsum==rsum)
+//		{
+//			printf("\nThe equilibrium element is %d at %d",a[i],i+1);
+//			break;
+//		}
+//	}
+//}
+//int asum(int a[],int m,int n)
+//{
+//	int i, sum = 0;
+//	for(i=m;i<=n;i++)
+//		sum = sum+a[i];
+//	return sum;
+//}
+
+//WAP to read M elems into arr, read n elems into brr print whether the arrays
+//are disjoint
+//void main()
+//{
+//	int a[30],b[30],n,m,i,j,fl=0;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<n;i++)
+//		scanf("%d",&a[i]);		
+//	printf("Enter the size of array");
+//	scanf("%d",&m);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<m;i++)
+//		scanf("%d",&b[i]);
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			if(a[i]==b[j])
+//			{
+//				printf("Both arrays are joint");
+//				fl=1;
+//				break;
+//			}
+//		}
+//	}
+//	if(fl==0)
+//		printf("Both arrays are disjoint");		
+//}
+
+//
+//WAP to read elements into 2 arrays print union array.
+//void main()
+//{
+//	int a[20],b[20],c[20],n,m,o,i,j,k;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<n;i++)
+//		scanf("%d",&a[i]);		
+//	printf("Enter the size of array");
+//	scanf("%d",&m);
+//	printf("Enter the array elements\n");
+//	for(i=n;i<n+m;i++)
+//		scanf("%d",&b[i]);
+//	for(i=0;i<n+m;i++)
+//	{
+//		for(j=i+1;j<n+m;j++);
+//	}
+//	for(i=0;i<o;i++)
+//		printf("%3d",c[i]);
+//}
+
+//void main()
+//{
+//	int n,a[20],i,t,j;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<n;i++)
+//		scanf("%d",&a[i]);		
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<i;j++)
+//		{
+//			if(a[i]<a[j])
+//			{
+//				t=a[j];
+//				a[j]=a[i];
+//				a[i]=t;
+//			}
+//		}
+//	}
+//	for(i=0;i<n-1;i+=2)
+//	{
+//		t = a[i];
+//		a[i] = a[i+1];
+//		a[i+1] = t;
+//	}
+//	for(i=0;i<n;i++)
+//		printf("%3d",a[i]);
+//}
+
+//Intersection of elements
+//void main()
+//{
+//	int n,a[20],i,b[20],t,j,c[20],m,p;
+//	printf("Enter the size of array");
+//	scanf("%d",&n);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<n;i++)
+//		scanf("%d",&a[i]);		
+//	
+//	printf("Enter the size of array");
+//	scanf("%d",&m);
+//	printf("Enter the array elements\n");
+//	for(i=0;i<m;i++)
+//		scanf("%d",&b[i]);		
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			if(a[i]==b[j])
+//				c[p++]=a[i];
+//		}
+//	}
+//	for(i=0;i<p;i++)
+//		printf("%3d",c[i]);
+//}
+
+//Transpose matrix
+//void main()
+//{
+//	int i,j,n,m,a[20][20],t[20][20];
+//	printf("Enter the size of 2d array");
+//	scanf("%d %d",&n,&m);
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			printf("Enter %d %d element",i,j);
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	printf("\nMatrix after transpose is\n");
+//	for(i=0;i<m;i++)
+//	{
+//		for(j=0;j<n;j++)
+//		{
+//			t[j][i]=a[i][j];
+//			a[i][j]=a[j][i];
+//			a[j][i]=t[j][i];
+//		}
+//	}
+//	for(i=0;i<m;i++)
+//	{
+//		for(j=0;j<n;j++)
+//		{
+//			printf("%5d",a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+
+//Identity matrix
 void main()
 {
-	int arr[20],n,k,i,fl=0;
-	printf("Enter the size of array");
-	scanf("%d",&n);
-	printf("Enter %d elements of array",n);
+	int i,j,a[20][20],n,m,fl=0;
+	printf("Enter the size of 2d array");
+	scanf("%d %d",&n,&m);
+	printf("%5d %5d",n,m);
+	printf("Enter %d elements",n*m);
 	for(i=0;i<n;i++)
-		scanf("%d",&arr[i]);
-	printf("Enter the element to find");
-	scanf("%d",&k);
-	for(i=0;i<n;i++)
+		for(j=0;j<m;j++)
+			scanf("%d",&a[i][j]);
+	if(n!=m)
+		fl++;
+	else
 	{
-		if(arr[i]==k)
+		for(i=0;i<n;i++)
 		{
-			printf("\n%d is found at %d",k,i+1);
-			fl++;
+			for(j=0;j<m;j++)
+			{
+				if(i==j&&a[i][j]!=1)
+					fl++;
+				if(i!=j&&a[i][j]!=0)
+					fl++;
+			}
 		}
 	}
 	if(fl==0)
-		printf("\n%d is not found",k);
+		printf("Entered matrix is a identity matrix");
+	else 
+		printf("Entered matrix is not a identity matrix");
 }
