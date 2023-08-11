@@ -1763,33 +1763,266 @@ in the container on the first day. */
 //}
 
 //Identity matrix
+//void main()
+//{
+//	int i,j,a[20][20],n,m,fl=0;
+//	printf("Enter the size of 2d array");
+//	scanf("%d %d",&n,&m);
+//	printf("%5d %5d",n,m);
+//	printf("Enter %d elements",n*m);
+//	for(i=0;i<n;i++)
+//		for(j=0;j<m;j++)
+//			scanf("%d",&a[i][j]);
+//	if(n!=m)
+//		fl++;
+//	else
+//	{
+//		for(i=0;i<n;i++)
+//		{
+//			for(j=0;j<m;j++)
+//			{
+//				if(i==j&&a[i][j]!=1)
+//					fl++;
+//				if(i!=j&&a[i][j]!=0)
+//					fl++;
+//			}
+//		}
+//	}
+//	if(fl==0)
+//		printf("Entered matrix is a identity matrix");
+//	else 
+//		printf("Entered matrix is not a identity matrix");
+//}
+
+//Symmetric matrix
+//void main()
+//{
+//	int a[20][20],i,j,n,m,fl=0;
+//	printf("Enter the size of 2d array");
+//	scanf("%d %d",&n,&m);
+//	if(m!=n)
+//		fl++;
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			printf("Enter %d %d element",i,j);
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			if(a[i][j]!=a[j][i])
+//				fl++;
+//		}
+//	}
+//	if(fl==0)
+//		printf("\nGiven matrix is a symmetric matrix");
+//	else
+//		printf("\nGiven matrix is not a symmetric matrix");
+//}
+
+//WAP to generate lower diagonal matrix of size m*n
+/*
+1 0 0
+1 1 0
+1 1 1
+*/
+
+//void main()
+//{
+//	int i,j,a[5][5];
+//	for(i=0;i<5;i++)
+//	{
+//		for(j=0;j<5;j++)
+//		{
+//			if(i>=j)
+//				a[i][j]=1;
+//			else
+//				a[i][j]=0;
+//		}
+//	}
+//	for(i=0;i<5;i++)
+//	{
+//		for(j=0;j<5;j++)
+//		{
+//			printf("%3d",a[i][j]);
+//		}
+//		printf("\n");	
+//	}
+//}
+
+//upper diagonal
+//void main()
+//{
+//	int a[20][20],i,j;
+//	for(i=0;i<5;i++)
+//	{
+//		for(j=0;j<5;j++)
+//		{
+//			if(i<=j)
+//				a[i][j]=1;
+//			else
+//				a[i][j]=0;
+//		}
+//	}
+//	for(i=0;i<5;i++)
+//	{
+//		for(j=0;j<5;j++)
+//		{
+//			printf("%3d",a[i][j]);
+//		}
+//		printf("\n");	
+//	}
+//	
+//}
+
+//WAP to print elements in zig zag manner.
+//void main()
+//{
+//	int a[20][20],m,n,i,j;
+//	printf("Enter the size of 2d array");
+//	scanf("%d %d",&n,&m);
+//	for(i=0;i<n;i++)
+//	{
+//		for(j=0;j<m;j++)
+//		{
+//			printf("Enter %d %d element",i,j);
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	for(i=0;i<n;i++)
+//	{
+//		if(i%2==0)
+//		{
+//			for(j=0;j<m;j++)
+//				printf("%3d",a[i][j]);
+//		}
+//		else
+//		{
+//			for(j=m-1;j>=0;j--)
+//				printf("%3d",a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+
+//
+//void main()
+//{
+//	int a[20][20],m,n,i,j,l,r,b,t;
+//	printf("Enter the size of 2d array");
+//	scanf("%d %d",&n,&m);
+//	t=l=0;
+//	b=n-1;
+//	r=m-1;
+//	for(i=0;i<n;i++)
+//		for(j=0;j<m;j++)
+//			scanf("%d",&a[i][j]);
+//	while(l<=r&&t<=b)
+//	{
+//		for(j=l;j<=r;j++)
+//			printf("%5d",a[t][j]);
+//		t++;
+//		printf("\n");
+//		for(i=t;i<=b;i++)
+//			printf("%5d",a[i][r]);
+//		r--;
+//		printf("\n");
+//		for(j=r;j>=l;j--)
+//			printf("%5d",a[b][j]);
+//		b--;
+//		printf("\n");
+//		for(i=b;i>=t;i--)
+//			printf("%5d",a[i][l]);
+//		l++;
+//		printf("\n");
+//	}
+//}
+
+// HW - row wise sum and col wise sum
+// row with max 1's
+//void main()
+//{
+//	int a[20][20],i,j,n,m,oc,r,max=0;
+//	printf("Enter the size of 2d array");
+//	scanf("%d %d",&n,&m);
+//	printf("Enter %d elements ",n*m);
+//	for(i=0;i<n;i++)
+//		for(j=0;j<m;j++)
+//			scanf("%d",&a[i][j]);
+//	for(i=0;i<n;i++)
+//	{
+//		oc=0;
+//		for(j=0;j<m;j++)
+//		{
+//			if(a[i][j]==1)
+//				oc++;
+//		}
+//		if(max<oc)
+//		{
+//			max= oc;
+//			r=i;
+//		}
+//	}
+//	printf("Max no of 1\'s are in %d row",r+1);
+//}
+
+//Take a string and find reverse
+//#include<string.h>
+//#include<stdio.h>
+//void rev(char str[])
+//{
+//	char rev[100];
+//	int i,j,len;
+//	for(len=0;str[len]!='\0';len++);
+//	for(i=0,j=len-1;str[i]!='\0';i++,j--)
+//			rev[j]=str[i];
+//	rev[len]='\0';
+//	printf("%s is the reversed string",rev);
+//}
+//void main()
+//{
+//	char str[100];
+//	int l;
+//	printf("Enter a string");
+//	scanf("%s",&str);
+//	rev(str);
+//}
+
+//Palindrome
+#include<string.h>
+#include<stdio.h>
+void equal(char str[],char rev[])
+{
+	int i,flag=1;
+	for(i=0;str[i]!='\0';i++)
+	{
+		if(str[i]!=rev[i])
+			flag=0;
+	}
+	if(flag==0)
+		printf("No, it is not a palindrome");
+	else
+		printf("Yes, it is palindrome");
+}
+char rev(char str[])
+{
+	char rev[100];
+	int i,j,len;
+	for(len=0;str[len]!='\0';len++);
+	for(i=0,j=len-1;str[i]!='\0';i++,j--)
+			rev[j]=str[i];
+	rev[len]='\0';
+	return rev;
+}
 void main()
 {
-	int i,j,a[20][20],n,m,fl=0;
-	printf("Enter the size of 2d array");
-	scanf("%d %d",&n,&m);
-	printf("%5d %5d",n,m);
-	printf("Enter %d elements",n*m);
-	for(i=0;i<n;i++)
-		for(j=0;j<m;j++)
-			scanf("%d",&a[i][j]);
-	if(n!=m)
-		fl++;
-	else
-	{
-		for(i=0;i<n;i++)
-		{
-			for(j=0;j<m;j++)
-			{
-				if(i==j&&a[i][j]!=1)
-					fl++;
-				if(i!=j&&a[i][j]!=0)
-					fl++;
-			}
-		}
-	}
-	if(fl==0)
-		printf("Entered matrix is a identity matrix");
-	else 
-		printf("Entered matrix is not a identity matrix");
+	char str[100];
+	int l;
+	printf("Enter a string");
+	scanf("%s",&str);
+	equal(str,rev(str));
 }
